@@ -1,0 +1,14 @@
+#CReate a pool first
+service_type: iscsi
+service_id: iscsi
+placement:
+  hosts:
+  - serverc.lab.example.com
+  - serverd.lab.example.com
+spec:
+  pool: iscsipool1
+  trusted_ip_list: "172.25.250.12,172.25.250.13"
+  api_port: 5000
+  api_secure: false
+  api_user: admin
+  api_password: redhat
