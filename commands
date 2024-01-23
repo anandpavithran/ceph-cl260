@@ -1,0 +1,7 @@
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+yum install s3fs-fuse
+  vi /etc/passwd-s3fs
+  12345:67890
+mkdir mys3bucket
+s3fs test /mnt/s3 -o sigv2 -o use_path_request_style -o passwd_file=/root/.s3.pass -o url=http://serverc:80 -d
+
