@@ -1,7 +1,8 @@
 #!/bin/bash
 radosgw-admin realm pull --url=http://serverc:80 --access-key=replication --secret-key=secret
 radosgw-admin period pull --url=http://serverc:80 --access-key=replication --secret-key=secret
-radosgw-admin period get-current radosgw-admin realm default --rgw-realm=cl260
+radosgw-admin period get-current radosgw-admin 
+realm default --rgw-realm=cl260
 radosgw-admin zonegroup default --rgw-zonegroup=classroom
 radosgw-admin zone create --rgw-zonegroup=classroom --rgw-zone=us-east-2 --endpoints=http://serverf:80 --access-key=replication --secret-key=secret --default
 radosgw-admin period update --commit --rgw-zone=us-east-2
