@@ -1,4 +1,4 @@
-cephadm shell ceph health
+cephadm shell -- ceph health
 cephadm shell -- ceph osd crush class ls
 cephadm shell -- ceph osd crush tree
 cephadm shell -- ceph osd crush rule create-replicated onssd default host ssd
