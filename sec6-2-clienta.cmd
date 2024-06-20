@@ -5,7 +5,7 @@ cephadm shell -- ceph df
 cephadm shell -- ceph auth get-or-create client.test_pool.clientb mon 'profile rbd' osd 'profile rbd' | sudo tee /etc/ceph/ceph.client.test_pool.clientb.keyring
 cat /etc/ceph/ceph.client.test_pool.clientb.keyring
 cephadm shell -- ceph auth get client.test_pool.clientb
-ssh root@serverb "yum install -y ceph-common"
+ssh root@clientb "yum install -y ceph-common"
 cephadm shell #scp ceph.conf test_pool keyring to clientb
 
 
