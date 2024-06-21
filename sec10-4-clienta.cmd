@@ -18,7 +18,7 @@ mount.ceph serverc.lab.example.com:/ /mnt/mycephfs -o name=restricteduser
 cd /mnt/mycephfs/.snap
 mkdir /mnt/mycephfs/.snap/mysnapshot
 cephadm shell -- ceph auth get client.restricteduser
-cephadm shell -- ceph auth caps client.restricteduser mds 'allow rws fsname=mycephfs' mon 'al low r fsname=mycephfs' osd 'allow rw tag cephfs data=mycephfs'
+cephadm shell -- ceph auth caps client.restricteduser mds 'allow rws fsname=mycephfs' mon 'allow r fsname=mycephfs' osd 'allow rw tag cephfs data=mycephfs'
 umount /mnt/mycephfs
 mount.ceph serverc.lab.example.com:/ /mnt/mycephfs -o name=restricteduser
 mkdir -p /mnt/mycephfs/.snap/mysnapshot
